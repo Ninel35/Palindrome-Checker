@@ -1,11 +1,11 @@
-const form = document.querySelector(".inputSabmit");
+const form = document.querySelector(".inputSubmit");
 const inform = document.querySelector(".text-inform");
 
 form.addEventListener("submit", handlerChecker);
 
 function handlerChecker(evt) {
     evt.preventDefault();
- console.log("h");
+    form.elements.inpt.value = form.elements.inpt.value.toLowerCase().replace(/\s+/g, '');
     if (form.elements.inpt.value === stringReverse(form.elements.inpt.value)) {
        
         inform.innerHTML = `It's palindrome`;
